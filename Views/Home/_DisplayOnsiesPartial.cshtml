@@ -1,0 +1,19 @@
+@model List<Onsie>
+
+<h1>Here are our Onesies</h1>
+
+@foreach( Onsie o in @Model)
+{
+    <div class="card">
+        <img class="card-img-top col-3" src="@o.ImgUrl" alt="Onsie">
+        <div class="card-body">
+            <h5 class="card-title">@o.Alien</h5>
+            <p>@o.Fabric</p>
+            <p>@o.Price</p>
+            @if(o.isFooted)
+            {
+                <p>Footed</p>
+            }
+        </div>
+    </div>
+}
